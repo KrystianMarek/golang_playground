@@ -9,21 +9,27 @@ import (
 	"sort"
 )
 
-func getSliceOfRandomInt(capacity int, maxIncrement int) []int {
-	myMap := make(map[int]int)
+type Set map[int]int
 
-	for index := 0; index < capacity; index++ {
-		value := index + rand.Intn(maxIncrement)
-		myMap[value] = value
-	}
-
-	result := make([]int, 0, len(myMap))
-	for _, value := range myMap {
+func (s Set) getValues() []int {
+	var result []int
+	for _, value := range s {
 		result = append(result, value)
 	}
 
 	sort.Ints(result)
 	return result
+}
+
+func getSliceOfRandomInt(capacity int, maxIncrement int) []int {
+	set := make(Set)
+
+	for index := 0; index < capacity; index++ {
+		value := index + rand.Intn(maxIncrement)
+		set[value] = value
+	}
+
+	return set.getValues()
 }
 
 func writeSliceOfInt(capacity int) {
