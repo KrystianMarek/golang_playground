@@ -30,7 +30,7 @@ EOF
 
 cat <<EOF > "${projectDirectory}/Makefile"
 build:
-	go build -o bin/rest_client
+	go build -o bin/${projectName}
 clean:
 	rm -rf bin/*
 
