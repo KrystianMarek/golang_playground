@@ -29,7 +29,7 @@ func main() {
 EOF
 
 cat <<EOF > "${projectDirectory}/Makefile"
-build:
+build: clean
 	go build -o bin/${projectName}
 clean:
 	rm -rf bin/*
