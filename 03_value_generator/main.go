@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"time"
 )
 
 type Set map[int]int
@@ -23,6 +24,7 @@ func (s Set) getValues() []int {
 
 func getSliceOfRandomInt(capacity int, maxIncrement int) []int {
 	set := make(Set)
+	rand.Seed(time.Now().UnixNano())
 
 	for index := 0; index < capacity; index++ {
 		value := index + rand.Intn(maxIncrement)
