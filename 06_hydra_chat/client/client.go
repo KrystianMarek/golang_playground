@@ -18,20 +18,20 @@ func main() {
 	fmt.Println("What's your name?")
 	fmt.Scanln(&name)
 
-	configurator := configurator.NewConfiguration()
-	err := configurator.GetConfiguration("chat.conf")
+	configuration := configurator.Configuration{}
+	err := configuration.GetConfiguration("chat.conf")
 	if err != nil {
 		panic(err)
 	}
 
-	name = configurator.Name
+	//name = configuration.Name
 	proto := "tcp"
-	if !configurator.TCP {
+	if !configuration.TCP {
 		proto = "udp"
 	}
 
 	fmt.Printf("Hello %s, connecting to the hydra chat system.... \n", name)
-	conn, err := net.Dial(proto, configurator.RemoteAddr)
+	conn, err := net.Dial(proto, configuration.RemoteAddr)
 	if err != nil {
 		log.Fatal("Could not connect to hydra chat system", err)
 	}

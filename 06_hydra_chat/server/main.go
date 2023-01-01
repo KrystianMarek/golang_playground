@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
-	config, _ := configurator.GetConfiguration("chat.conf")
-	core.Run(config.RemoteAddr)
+	configuration := configurator.Configuration{}
+	err := configuration.GetConfiguration("chat.conf")
+	if err != nil {
+		panic(err)
+	}
+	core.Run(configuration.RemoteAddr)
 }

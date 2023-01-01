@@ -2,6 +2,7 @@ Scratchpad for GoLang practice, based on
 
 - [Mastering Go Programing](https://learning.oreilly.com/videos/mastering-go-programming/9781786468239/) - [source code](https://github.com/minaandrawos/Mastering-Go-Programming)
 - Official:
+- - [Effective Go](https://go.dev/doc/effective_go)
 - - [Tour of Go](https://go.dev/tour/list)
 - - [tutorials](https://go.dev/doc/tutorial/)
 - - [language specification](https://go.dev/ref/spec#Type_parameter_declarations)

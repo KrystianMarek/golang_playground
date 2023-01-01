@@ -6,13 +6,13 @@ import (
 )
 
 func TestGetConfiguration(t *testing.T) {
-	configurator := NewConfiguration()
-	err := configurator.GetConfiguration("chat.conf")
+	Configuration := Configuration{}
+	err := Configuration.GetConfiguration("chat.conf")
 	if err != nil {
 		panic(err)
 	}
 
-	assert.Equal(t, "127.0.0.1:2100", configurator.RemoteAddr, "")
-	assert.Equal(t, true, configurator.TCP, "")
-	assert.Equal(t, "Jack", configurator.Name, "")
+	assert.Equal(t, "127.0.0.1:2100", Configuration.RemoteAddr, "")
+	assert.Equal(t, true, Configuration.TCP, "")
+	assert.Equal(t, "Jack", Configuration.Name, "")
 }
