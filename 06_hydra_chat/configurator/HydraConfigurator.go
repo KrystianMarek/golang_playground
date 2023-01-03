@@ -13,7 +13,7 @@ type Configuration struct {
 
 var wrongTypeError error = errors.New("type must be a pointer to a struct")
 
-func (config *Configuration) GetConfiguration(filename string) (err error) {
+func (config *Configuration) GetConfiguration(filename string) error {
 	//check if this is type pointer
 
 	mysRValue := reflect.ValueOf(config)
@@ -26,7 +26,7 @@ func (config *Configuration) GetConfiguration(filename string) (err error) {
 		return wrongTypeError
 	}
 
-	err = MarshalCustomConfig(mysRValue, filename)
+	err := MarshalCustomConfig(mysRValue, filename)
 
 	return err
 }
