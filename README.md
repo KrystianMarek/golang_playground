@@ -1,4 +1,4 @@
-Scratchpad for GoLang practice, based on 
+My GoLang playground, based on
 
 - [Mastering Go Programing](https://learning.oreilly.com/videos/mastering-go-programming/9781786468239/) - [source code](https://github.com/minaandrawos/Mastering-Go-Programming)
 - Official:
