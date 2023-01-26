@@ -1,0 +1,21 @@
+[submodule "materials/mastering_go_programming"]
+	path = materials/mastering_go_programming
+	url = https://github.com/minaandrawos/Mastering-Go-Programming
+[submodule "materials/ultimate-go-programming"]
+	path = materials/ultimate-go-programming
+	url = https://github.com/ardanlabs/gotraining
+[submodule "materials/hands_on_system_programming_with_go"]
+	path = materials/hands_on_system_programming_with_go
+	url = https://github.com/PacktPublishing/Hands-On-System-Programming-with-Go
+[submodule "14_capi/kubecon-na-22-capi-lab"]
+	path = 14_capi/kubecon-na-22-capi-lab
+	url = https://github.com/ykakarap/kubecon-na-22-capi-lab
+[submodule "15_tilt/tilt-avatars"]
+	path = 15_tilt/tilt-avatars
+	url = https://github.com/tilt-dev/tilt-avatars
+[submodule "14_capi/cluster-api"]
+	path = 14_capi/cluster-api
+	url = git@github.com:kubernetes-sigs/cluster-api.git
+[submodule "14_capi/kind-local"]
+	path = 14_capi/kind-local
+	url = https://github.com/tilt-dev/kind-local
