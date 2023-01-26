@@ -1,0 +1,33 @@
+version_settings(check_updates=True, constraint='>=0.22.2')
+
+local_resource(
+  "generate",
+  cmd="make generate",
+  trigger_mode=TRIGGER_MODE_MANUAL,
+  auto_init=False,
+  labels=["makefile"],
+)
+
+local_resource(
+  "manifests",
+  cmd="make manifests",
+  trigger_mode=TRIGGER_MODE_MANUAL,
+  auto_init=False,
+  labels=["makefile"],
+)
+
+local_resource(
+  "build",
+  cmd="make build",
+  trigger_mode=TRIGGER_MODE_MANUAL,
+  auto_init=False,
+  labels=["makefile"],
+)
+
+local_resource(
+  "install",
+  cmd="make install",
+  trigger_mode=TRIGGER_MODE_MANUAL,
+  auto_init=False,
+  labels=["makefile"],
+)

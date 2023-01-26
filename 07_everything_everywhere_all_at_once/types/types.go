@@ -1,4 +1,4 @@
-package main
+package types
 
 import (
 	"errors"
@@ -78,7 +78,7 @@ func playgorund(writer *tabwriter.Writer) {
 
 }
 
-func main() {
+func types() {
 	writer := tabwriter.NewWriter(os.Stdout, 1, 1, 1, ' ', 0)
 	defer writer.Flush()
 	playgorund(writer)
